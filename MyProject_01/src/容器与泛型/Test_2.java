@@ -25,4 +25,8 @@ class Student_1 {
 	public void setAge(int age) {
 		this.age = age;
 	}
+	@Override
+	public String toString() {
+		return "Student_1 [name=" + name + ", age=" + age + "]";
+		}
 }
