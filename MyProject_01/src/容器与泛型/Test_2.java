@@ -1,6 +1,7 @@
 package 容器与泛型;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class Test_2 {
 	public static void main(String[] args) {
@@ -18,6 +19,12 @@ public class Test_2 {
 		System.out.println("keySet:");
 		for(Student_1 key:map.keySet()) {
 			System.out.println(key +"   "+map.get(key));
+		}
+		System.out.println();
+		//使用entrySet遍历
+		System.out.println("entrySet:");
+		for(Entry<Student_1, String> entry : map.entrySet()){
+			System.out.println(entry.getKey() + "   " + entry.getValue());
 		}
 	}
 }
