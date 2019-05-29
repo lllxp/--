@@ -50,3 +50,30 @@ class MyQue{
 		return null;
 	}
 }
+//栈的实现
+class Stack{
+	private LinkedList<Object> linklist;	
+	public Stack(){
+		linklist = new LinkedList<Object>();
+	}	
+	//入栈操作
+	public void inStack(Object obj){
+		linklist.addFirst(obj);
+	}
+	//出栈操作
+	public void outStack(){
+		linklist.removeFirst();
+	}
+	//判断栈是否为空
+	public boolean isEmpty(){
+		return linklist.isEmpty();
+	}	
+	@Override
+	public String toString() {
+		Iterator<Object> iterator = linklist.iterator();
+		while(iterator.hasNext()){
+			System.out.print(iterator.next() + "    ");
+		}
+		return null;
+	}
+}
