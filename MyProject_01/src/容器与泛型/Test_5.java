@@ -1,5 +1,10 @@
 package 容器与泛型;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+
 class Student2 implements Comparable<Object>{
 	String id;	
 	String name;	
@@ -66,6 +71,16 @@ public class Test_5 {
 	public Object id;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		List<Student2> list = new ArrayList<>();
+        list.add(new Student2("01", "张三", 94));
+        list.add(new Student2("02", "李四", 75));
+        list.add(new Student2("03", "王五", 87));
+        list.add(new Student2("04", "赵六", 77));    
+        //按总分排序
+        Collections.sort(list);
+        Iterator<Student2> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
 	}
 }
