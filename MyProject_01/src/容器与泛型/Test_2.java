@@ -14,8 +14,11 @@ public class Test_2 {
 		map.put(s1,"归属地：福州");
 		map.put(s2,"归属地：宁德");
 		map.put(s3,"归属地：厦门");
-		
-		System.out.println(map);
+		//使用keySet遍历
+		System.out.println("keySet:");
+		for(Student_1 key:map.keySet()) {
+			System.out.println(key +"   "+map.get(key));
+		}
 	}
 }
 class Student_1 {
