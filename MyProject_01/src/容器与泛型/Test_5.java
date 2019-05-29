@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Comparator;
 
 class Student2 implements Comparable<Object>{
 	String id;	
@@ -65,7 +66,15 @@ class Student2 implements Comparable<Object>{
 		return result;
 		}
 	}
+class stuComparator implements Comparator<Student2>{
+	
+	 public int compare(Student2 s1, Student2 s2) {
+		 
+	        return s1.getId().compareTo(s2.getId());
+	        
+	    }
 
+}
 public class Test_5 {	
 	
 	public Object id;
@@ -77,10 +86,16 @@ public class Test_5 {
         list.add(new Student2("03", "王五", 87));
         list.add(new Student2("04", "赵六", 77));    
         //按总分排序
+        System.out.println("按总分排序：");
         Collections.sort(list);
         Iterator<Student2> iterator = list.iterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
+        //按学号排序
+        System.out.println("按学号排序：");
+        list.sort(new stuComparator());
+        Iterator<Student2> iteratorA = list.iterator();
+        iteratorA.forEachRemaining(System.out::println);
 	}
 }
