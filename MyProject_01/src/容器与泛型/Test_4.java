@@ -7,6 +7,7 @@ public class Test_4 {
 	public static void main(String[] args){
 		
 		// TODO Auto-generated method stub
+		//队列
 		MyQue MyQue = new MyQue();
 		System.out.print("入队:");
 		MyQue.inQueue("张三");
@@ -18,7 +19,18 @@ public class Test_4 {
 			MyQue.outQueue();
 		}
 		System.out.println(MyQue.toString());
-		
+		//栈
+		Stack sta= new Stack();
+		System.out.print("入栈：");
+		sta.inStack("小张");
+		sta.inStack("小李");
+		sta.inStack("小王");
+		System.out.println( sta.toString() );
+		System.out.print("出栈：");
+		if(!sta.isEmpty()) {
+			sta.outStack();
+		}
+		System.out.println(sta.toString());
 	}
 }
 
