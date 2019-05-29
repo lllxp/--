@@ -22,7 +22,17 @@ class Student2{
 	public void setCount(int count) {	
 		this.count = count;	
 	}	
-}
+	@Override
+	public String toString() {
+		return "Student2 [id=" + id + ", name=" + name + ", count=" + count + "]";
+		}
+	public Student2(int id, String name, int count) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.count = count;
+		}
+	}
 
 public class Test_5 {
 	
